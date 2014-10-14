@@ -10,8 +10,7 @@ namespace WindowsFormsApplication1.data
 {
     interface IDataImport
     {
-        List<TransactionRecord> importData(String content);
+        List<TransactionRecord> ImportData(String content);
 
-        List<TransactionRecord> importData(FileStream fileStream);
     }
 }

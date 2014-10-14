@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form4
+    partial class FileUploadForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,65 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.filePathTextField = new System.Windows.Forms.TextBox();
+            this.uploadBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
+            this.fileSelectBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // filePathTextField
             // 
-            this.textBox1.Location = new System.Drawing.Point(249, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.filePathTextField.Location = new System.Drawing.Point(210, 81);
+            this.filePathTextField.Name = "filePathTextField";
+            this.filePathTextField.Size = new System.Drawing.Size(204, 20);
+            this.filePathTextField.TabIndex = 0;
+            this.filePathTextField.TextChanged += new System.EventHandler(this.filePathTextField_TextChanged);
             // 
-            // button1
+            // uploadBtn
             // 
-            this.button1.Location = new System.Drawing.Point(443, 84);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "上传文件";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.uploadBtn.Location = new System.Drawing.Point(501, 78);
+            this.uploadBtn.Name = "uploadBtn";
+            this.uploadBtn.Size = new System.Drawing.Size(75, 23);
+            this.uploadBtn.TabIndex = 1;
+            this.uploadBtn.Text = "上传";
+            this.uploadBtn.UseVisualStyleBackColor = true;
+            this.uploadBtn.Click += new System.EventHandler(this.uploadBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 84);
+            this.label1.Location = new System.Drawing.Point(149, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "文件路径";
+            this.label1.Text = "文件路径：";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button2
+            // fileSelectBtn
             // 
-            this.button2.Location = new System.Drawing.Point(356, 77);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.fileSelectBtn.Location = new System.Drawing.Point(420, 79);
+            this.fileSelectBtn.Name = "fileSelectBtn";
+            this.fileSelectBtn.Size = new System.Drawing.Size(75, 23);
+            this.fileSelectBtn.TabIndex = 3;
+            this.fileSelectBtn.Text = "选择文件";
+            this.fileSelectBtn.UseVisualStyleBackColor = true;
+            this.fileSelectBtn.Click += new System.EventHandler(this.fileSelectBtn_Click);
             // 
-            // Form4
+            // FileUploadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 369);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.fileSelectBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form4";
+            this.Controls.Add(this.uploadBtn);
+            this.Controls.Add(this.filePathTextField);
+            this.Name = "FileUploadForm";
             this.Text = "文件上传";
-            this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,11 +94,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox filePathTextField;
+        private System.Windows.Forms.Button uploadBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button fileSelectBtn;
     }
 }
 

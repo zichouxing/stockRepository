@@ -43,8 +43,8 @@ namespace WindowsFormsApplication1.model
             this.shareholderCode = shareholderCode;
         }
 
-        public TransactionRecord();
-
+        public TransactionRecord(){
+        }
 
         public String Currency
         {

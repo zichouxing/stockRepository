@@ -10,32 +10,29 @@ using WindowsFormsApplication1.data;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form4 : Form
+    public partial class FileUploadForm : Form
     {
-        public Form4()
+        public FileUploadForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //测试，将excel中的sheet1导入到sqlserver中
-            string connString = "server=localhost;uid=sa;pwd=sqlgis;database=master";
-            System.Windows.Forms.OpenFileDialog fd = new OpenFileDialog();
-            if (fd.ShowDialog() == DialogResult.OK)
-            {
-                TransferData(fd.FileName, "sheet1", connString);
-            }
-        }
-
-        private void Form4_Load(object sender, EventArgs e)
+        private void fileSelectBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void uploadBtn_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void filePathTextField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
     }
 }

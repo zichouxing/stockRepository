@@ -15,14 +15,13 @@ namespace WindowsFormsApplication1.data
 {
     class ZSZQDataImport : IDataImport
     {
-        List<TransactionRecord> ImportData(String content)
-        {
-            throw new System.NotSupportedException("import data for ZSZQ is not supported.");
-        }
+        private string sheetName = "wt";
 
-        List<TransactionRecord> ImportData(FileStream fileStream)
+        public List<TransactionRecord> ImportData(String filePath)
         {
-            throw new System.NotSupportedException("import data for ZSZQ is not supported.");
+            DataSet ds = ExcelToDataSet(filePath, sheetName); 
+            List<TransactionRecord> trList = DataSetToList(ds);
+            return trList;
         }
 
         public DataSet ExcelToDataSet(string excelFile, string sheetName)
@@ -57,25 +56,20 @@ namespace WindowsFormsApplication1.data
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 TransactionRecord tr = new TransactionRecord();
-                //获取对象所有属性
                 PropertyInfo[] propertyInfo = tr.GetType().GetProperties();
                 for (int j = 0; j < dt.Columns.Count; j++)
                 {
                     foreach (PropertyInfo info in propertyInfo)
                     {
-                        //属性名称和列名相同时赋值
-                        if (dt.Columns[j].ColumnName.ToUpper().Equals(info.Name.ToUpper()))
+                        if (dt.Rows[i][j] != DBNull.Value)
                         {
-                            if (dt.Rows[i][j] != DBNull.Value)
-                            {
-                                info.SetValue(tr, dt.Rows[i][j], null);
-                            }
-                            else
-                            {
-                                info.SetValue(tr, null, null);
-                            }
-                            break;
+                            info.SetValue(tr, dt.Rows[i][j], null);
                         }
+                        else
+                        {
+                            info.SetValue(tr, null, null);
+                        }
+                        break;
                     }
                 }
                 trList.Add(tr);
@@ -83,6 +77,8 @@ namespace WindowsFormsApplication1.data
             return trList;
         }
     }
+
+
 }
 
 

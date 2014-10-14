@@ -1,0 +1,11 @@
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\StockApp.csprojResolveAssemblyReference.cache
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\StockApp.csproj.GenerateResource.Cache
+C:\workspace\stockRepository\StockApp\StockApp\bin\Debug\StockApp.exe
+C:\workspace\stockRepository\StockApp\StockApp\bin\Debug\StockApp.pdb
+C:\workspace\stockRepository\StockApp\StockApp\bin\Debug\System.Data.SQLite.dll
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\StockApp.exe
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\StockApp.pdb
+C:\workspace\stockRepository\StockApp\StockApp\obj\x86\Debug\WindowsFormsApplication1.FileUploadForm.resources
